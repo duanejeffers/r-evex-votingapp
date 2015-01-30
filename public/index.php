@@ -35,7 +35,9 @@
 	});
 
 	$app->group('/reddit', function() use($app) {
-		
+		$app->map('/callback', function() use($app) {
+
+		})->via('GET', 'POST')->name('reddit-callback');
 	});
 
 	$app->run();
